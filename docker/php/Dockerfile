@@ -3,7 +3,7 @@ FROM php:8.3-fpm-bookworm
 RUN set -eux \
     && apt update -y \
     && apt upgrade -y \
-    && apt install -y vim git libzip-dev\
+    && apt install -y vim git libzip-dev zip unzip \
     && docker-php-ext-install opcache bcmath zip \
     && apt clean \
     && rm -rf /var/lib/apt/lists/*
