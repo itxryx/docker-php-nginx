@@ -17,6 +17,7 @@ services:
       context: docker/php
       dockerfile: Dockerfile
     container_name: app-php
+    working_dir: /app/public
     volumes:
       - ./:/app
       - ./docker/php/php.ini:/usr/local/etc/php/php.ini # cp php.ini-development php.ini
